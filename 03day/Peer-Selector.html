@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,32 +8,31 @@
     <title>Pear Selector</title>
     <style>
         /* Select all to div under h3 */
-        h3~div{
+        h3~div {
             font-size: 20px;
             color: coral;
         }
-        
+
         /* just h3 below the div */
-                h3+div{
+        h3+div {
             font-size: 20px;
             font-weight: bold;
             color: blue;
         }
-        
-        #title3~div{
+
+        #title3~div {
             font-size: 20px;
             color: coral;
         }
 
-        #title4+div{
+        #title4+div {
             font-size: 20px;
             font-weight: bold;
             color: blue;
         }
-
-
     </style>
 </head>
+
 <body>
     <h3 id="title1">동위 선택자(+, ~)</h3>
     <div>div_01</div>
@@ -40,21 +40,21 @@
     <div>div_03</div>
     <div>div_04</div>
     <div>div_05</div>
-    
+
     <h3 id="title2">동위 선택자(+, ~)</h3>
     <div>div_01</div>
     <div>div_02</div>
     <div>div_03</div>
     <div>div_04</div>
     <div>div_05</div>
-    
+
     <h3 id="title3">동위 선택자(+, ~)</h3>
     <div>div_01</div>
     <div>div_02</div>
     <div>div_03</div>
     <div>div_04</div>
     <div>div_05</div>
-    
+
     <h3 id="title4">동위 선택자(+, ~)</h3>
     <div>div_01</div>
     <div>div_02</div>
@@ -62,4 +62,5 @@
     <div>div_04</div>
     <div>div_05</div>
 </body>
+
 </html>
