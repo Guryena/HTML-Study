@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr = [];
+        arr[0] = "kor";
+        arr[1] = "eng";
+        arr[2] = "math";
+
+        for (var i = 0; i < arr.length; i++) {
+            document.write(arr[i] + "<br>");
+        }
+
+        document.write("<br>")
+
+        for (var j in arr) {
+            document.write(arr[j] + "<br>");
+        }
+    </script>
+      <style>
+        #wrap{
+            width: 90%;
+            margin: auto;
+            padding: 10px;
+        }
+        table{
+            width: 100%;
+            border:  2px black;
+            border-style: dotted;
+        }
+        tr, td{
+            border: 2px red;
+            border-style: inset; 
+            font-style: italic;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+        }
+        .first{
+            width: 5%;
+        }
+        .second{
+            width: 10%;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <table>
+            <tr>
+                <script>
+                    for (var i = 1; i < 10; i++) {
+                        if (i == 1) {
+                            document.write('<td class = "first">');
+                            document.write("</td>");
+                        }
+                        else {
+                            document.write("<td class = 'second'>");
+                            document.write(i + "단");
+                            document.write("</td>");
+                        }
+                    }
+                </script>
+            </tr>
+
+            <script>
+                for (var y = 1; y < 10; y++) {
+                    document.write("<tr>");
+                    //    document.write("<td>");
+                    //     document.write("</td>");
+                    document.write("</tr>");
+                    for (var x = 1; x < 10; x++) {
+                        if (x == 1) {
+                            document.write("<td class = 'first'>");
+                            document.write(y);
+                            document.write("</td>");
+                            continue;
+                        }
+                        document.write("<td class = 'second'>");
+                        document.write(x + " x " + y + " = " + x * y);
+                        document.write("</td>")
+
+                    }
+                }
+            </script>
+        </table>
+    </div>
+
+</body>
+
+</html>

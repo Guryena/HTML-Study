@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrap {
+            width: 90%;
+            margin: auto;
+            padding: 10px;
+        }
+
+        table {
+            width: 100%;
+            border: 2px black;
+            border-style: dotted;
+        }
+
+        tr,
+        td {
+            border: 2px red;
+            border-style: inset;
+            font-style: italic;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+        }
+
+        .first {
+            width: 5%;
+        }
+
+        .second {
+            width: 10%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <table>
+            <script>
+                for (var y = 1; y <= 10; y++) {
+                    document.write("<tr>");
+                    for (var x = 1; x < 10; x++) {
+                        if (y == 1) {
+                            if (x == 1) {
+                                document.write('<td>');
+                                document.write("</td>");
+                            }
+                            else if(x > 1) {
+                                document.write("<td>");
+                                document.write(x + "단");
+                                document.write("</td>");
+                            }
+                        }
+                        else if (y > 1) {
+                            if (x == 1) {
+                                document.write("<td>");
+                                document.write(y-1);
+                                document.write("</td>");
+                            }
+                            else if (x > 1) {
+                                document.write("<td class>");
+                                document.write(x + " x " + y + " = " + x * y);
+                                document.write("</td>")
+                            }
+                        }
+                    }
+                    document.write("</tr>");
+                }
+            </script>
+        </table>
+    </div>
+
+</body>
+
+</html>
