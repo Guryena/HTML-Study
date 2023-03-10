@@ -47,25 +47,20 @@
                     for (var x = 1; x < 10; x++) {
                         if (y == 1) {
                             if (x == 1) {
-                                document.write('<td>');
-                                document.write("</td>");
+                                document.write("<td></td>");
                             }
-                            else if(x > 1) {
-                                document.write("<td>");
-                                document.write(x + "단");
-                                document.write("</td>");
+                            else if (x > 1) {
+                                document.write("<td>" + x + "단" +"</td>" );
                             }
                         }
                         else if (y > 1) {
                             if (x == 1) {
-                                document.write("<td>");
-                                document.write(y-1);
-                                document.write("</td>");
+                                var i = y-1;
+                                document.write("<td>" + i + "</td>");
                             }
                             else if (x > 1) {
-                                document.write("<td class>");
-                                document.write(x + " x " + y + " = " + x * y);
-                                document.write("</td>")
+                                var result = x + " x " + y + " = " + x * y;
+                                document.write("<td>" + result + "</td>");
                             }
                         }
                     }
