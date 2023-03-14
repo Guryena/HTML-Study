@@ -1,6 +1,12 @@
+body {
+    background: linear-gradient(to bottom, red, orange, yellow, green, blue, indigo, purple);
+    background-attachment: fixed;
+}
+
 #wrap {
     border: 1px solid blanchedalmond;
     margin: auto;
+    padding-bottom: 36px;
     height: 800px;
     width: 946px;
 
@@ -45,18 +51,28 @@ nav li a {
 }
 
 
-aside{
+aside {
     background-color: skyblue;
     float: right;
     height: 51%;
 }
-aside img{
+
+aside div :hover {
+    border: 1px black solid;
+    opacity: 1.0;
+    padding: 0;
+}
+
+aside img {
     padding: 4px;
     margin-top: 10px;
 }
-section{
-    padding: 10px;
+
+section {
+    padding: 20px;
+    background-color: white;
 }
+
 footer {
     background-color: darkgreen;
     text-align: center;
@@ -68,4 +84,5 @@ footer {
 
 footer p {
     margin: auto;
+    
 }
