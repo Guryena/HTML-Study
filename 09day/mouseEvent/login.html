@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-out</title>
+    <script>
+        window.onload = function () {
+            let sbmBtn = document.getElementById("sbmBtn");
+            sbmBtn.onclick = function () {
+                if (document.getElementById("uID").value =="") {
+                    alert("user id blank");
+                }
+                else if (document.getElementById("uPW").value == ""){
+                    alert("user pw blank");
+                }
+                else{
+                    alert("login");
+                    document.getElementById("loginForm").submit();
+                }
+            };
+
+            let resBtn = document.getElementById("resBtn");
+            resBtn.onclick = function () {
+                alert("reset");
+                document.getElementById("loginForm").reset();
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <form id="loginForm" action="http://www.google.com" method="post">
+        User ID : <input id="uID" type="text", name=""uID><br/>
+        UserPW : <input id = "uPW" type = "password" name="uPW"><br/>
+        <input id = "sbmBtn" type="button" value = "SUBMIT" />
+        <input id = "resBtn" type="button" value = "RESET" />
+    </form>
+</body>
+</html>

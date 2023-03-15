@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            let cnt = document.getElementById("number").value;
+            
+            function addHandler() {
+                cnt ++;
+                document.getElementById("number").value = cnt;
+            }
+            
+            function subHandler() {
+                cnt --;
+                document.getElementById("number").value = cnt;
+            }
+            
+            let addBtn = document.getElementById("add");
+            addBtn.addEventListener("mouseup", addHandler);
+            let subBtn = document.getElementById("sub");
+            subBtn.addEventListener("mouseup ", subHandler);
+
+        }
+    </script>
+</head>
+<body>
+    <span>
+        갯수
+        <input id="number" type="text" value="0">
+        <input id="add" type="button" value="+">
+        <input id="sub" type="button" value="-">
+    </span>
+</body>
+</html>

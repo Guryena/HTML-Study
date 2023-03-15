@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculate</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="calculate.js"></script> -->
+    <script>
+    function autoEvent() {
+        let objN1 = document.getElementById("num1").value; //id값 찾아와 value를 저장
+        let objN2 = document.getElementById("num2").value;
+        let result = Number(objN1) + Number(objN2);
+        // console.log(result);
+        document.getElementById("result").innerHTML = result;
+        
+    };</script>
+</head>
+<body>
+
+
+    <!-- <input id="num1" type="number" value="0"> -->
+    <input id="num1" type="number" value="0" onkeyup="autoEvent()">
+    <p id="cal"><h1> + </h1></p>
+    <!-- <input id="num2" type="number" value="0"> -->
+    <input id="num2" type="number" value="0" onkeyup="autoEvent()">
+    <!-- <input id="add" type="button"> -->
+    <textarea name="result" id="result" cols="15" rows="5"></textarea>
+</body>
+</html>

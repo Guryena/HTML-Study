@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="eventStyle.css">
+    <script>
+        window.onload = function () {
+
+            function addHandler(e) {
+                console.log("click");
+                console.log("this : " + this);
+
+                console.log(e);
+
+                // //before IE8
+                // let event = e|| window.event;
+                // for (const key in event) {
+                //     console.log(key + " : " + event[key]);
+                //     }
+
+                this.style.backgroundColor = "#0000ff";
+            };
+
+            let objD = document.getElementById("objDiv");
+            objD.addEventListener("click", addHandler);
+
+            let objP = document.getElementById("objPar");
+            objP.addEventListener("click", addHandler);
+
+            let divEvent = document.getElementById("divEvent");
+            divEvent.addEventListener("click", divHandler);
+
+                //  이벤트 객체
+                //  - 사용자가 직접 만들지 않아도 기본적으로 제공
+                //  - 속성과 메소드가 존재
+                //  - ex) 마우스 클릭시 클릭한 좌표값, 이벤트를 발생시킨 객체가 어떤 것인지
+                 
+
+
+            function divHandler(event) {
+                console.log("check");
+                console.log("this : " + this);
+
+                console.log(event);
+
+                this.style.backgroundColor = "#123456"
+            }
+        };
+
+    </script>
+
+    <style>
+        #objDiv {
+            width: 200px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 1.2em;
+            background-color: #f00;
+            color: #fff;
+            font-weight: bolder;
+        }
+
+        #objPar {
+            width: 200px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 1.2em;
+            background-color: #0f0;
+            color: #fff;
+            font-weight: bolder;
+        }
+
+        #divEvent {
+            width: 200px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 1.2em;
+            background-color: rgba(26, 168, 220);
+            color: #fff;
+            font-weight: bolder;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="objDiv">Object Division</div>
+    <p id="objPar">Object Paragraph</p>
+    <div id="divEvent">EventTest</div>
+</body>
+
+</html>

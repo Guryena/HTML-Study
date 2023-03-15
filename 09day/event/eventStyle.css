@@ -1,0 +1,30 @@
+#cEventAdd {
+    width: 200px; height: 100px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 1.2em;
+    background-color: #f00;
+    color: #fff;
+    font-weight: bolder;
+ }
+ 
+ #cEventRem {
+    width: 200px; height: 100px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 1.2em;
+    background-color: #0f0;
+    color: #fff;
+    font-weight: bolder;
+ }
+
+
+ #cEvent {
+    width: 200px; height: 100px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 1.2em;
+    background-color: #f00;
+    color: #fff;
+    font-weight: bolder;
+ }

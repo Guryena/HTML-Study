@@ -17,7 +17,11 @@ header {
     background-repeat: no-repeat;
     background-size: auto;
     height: 35.43%;
+    
+}
 
+header img{
+    float: right;
 }
 
 h1 {
@@ -54,7 +58,7 @@ nav li a {
 aside {
     background-color: skyblue;
     float: right;
-    height: 51%;
+    height: 51.1%;
 }
 
 aside div :hover {

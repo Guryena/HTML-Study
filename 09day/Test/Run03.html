@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+         
+        function countText() {
+            let txt = document.getElementById("Text").value;
+            let cnt = txt.length;
+            document.getElementById("countText").innerHTML = cnt;
+         }
+
+         let count = document.getElementById("Text");
+         count.addEventListener("keyup", countText);
+
+  
+
+
+ </script>    
+</head>
+<body>
+    
+    <textarea name="Text" id="Text" onkeyup="countText()" cols="30" rows="10"></textarea>
+    <div id="countText"></div>
+
+
+ 
+</body>
+</html>
