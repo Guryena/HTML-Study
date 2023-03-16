@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <script>
+        $(function () {
+            //each
+            $('p').each(function (index, item) {
+                console.log($(item).text() + 'index : ' + index);
+                if (index % 2 == 0) {
+                    $(item).css("background", "#dfdfdf");
+
+                }
+                else {
+                    $(item).css("background", "#cccccc");
+                }
+            })
+
+        })
+
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("p").html("Hello <b>world!</b>");
+            });
+        });
+
+
+    </script>
+</head>
+
+<body>
+    <p> Hello javascript! </p>
+    <p> Hello jQuery! </p>
+    <p> Hello node.js! </p>
+
+    <div id="htmlMethod"> html() 메서드 </div>
+    <div id="textMethod"> text() 메서드 </div>
+
+    <div id="addClass"> addClass() 메서드 </div>
+    <div id="removeClass" class="remCla"> removeClass() 메서드 </div>
+
+    <div id="attrMethod">
+        <img>
+        <br>
+        <img>
+    </div>
+
+    <div id="cssMethod"> CSS METHOD </div>
+
+    <div id="removeMthod"> Remove Object! </div>
+    <div id="emptyMthod"> Empty Object! </div>
+
+    <button>Change content of all p elements</button>
+
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        $(function () {
+            let wrapObj = $('#wrap');
+            let divObj = $('<div>hello</div>');
+
+            // divObj.appendTo(wrapObj);
+
+            //부모객체가 자식객체를 삽입
+            // wrapObj.append(divObj);
+
+            //첫번째 자식객체로 삽입
+            //divObj.prependTo(wrapObj); //.prependTo()
+            //wrapObj.prepend(divObj); //.prepend()
+
+            //막내로 들어 가겠다.
+            //divObj.insertAfter(wrapObj); //.insertAfter()
+            //wrapObj.after(divObj);      //.after()
+
+            //divObj.insertBefore(wrapObj); //.insertBefore()
+            wrapObj.before(divObj); //.before()
+
+
+        })
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div>contents</div>
+    </div>
+
+</body>
+
+</html>

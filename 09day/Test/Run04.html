@@ -7,20 +7,24 @@
     <title>Document</title>
     <script>
         window.onload = function () {
+            
             let cnt = document.getElementById("number").value;
             
             function addHandler() {
-                cnt ++;
-                document.getElementById("number").value = cnt;
+                cnt++;
+                document.getElementById("number").value = Number(cnt);
+                console.log("ok");
             }
-            
-            function subHandler() {
-                cnt --;
-                document.getElementById("number").value = cnt;
-            }
-            
+
             let addBtn = document.getElementById("add");
             addBtn.addEventListener("mouseup", addHandler);
+            
+            function subHandler() {
+                cnt--;
+                document.getElementById("number").value = Number(cnt);
+                console.log("ok");
+            }
+            
             let subBtn = document.getElementById("sub");
             subBtn.addEventListener("mouseup ", subHandler);
 

@@ -10,7 +10,7 @@ let grade = {
     total : function sumGrade(grade) {
         return grade();
     },
-    avgGrade : function Avg() {
+    avgGrade : function Avg(grade) {
         let avg = grade() /3;
         return avg;
     }

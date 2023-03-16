@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(to bottom, red, orange, yellow, green, blue, indigo, purple);
+    background: linear-gradient(to bottom, skyblue, white);
     background-attachment: fixed;
 }
 
@@ -26,7 +26,10 @@ header img{
 
 h1 {
     float: left;
-    color: red;
+    background: linear-gradient(to bottom, red, yellow, green, blue, purple);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* color: red; */
     font-size: 3.6em;
     padding-left: 10px;
 }

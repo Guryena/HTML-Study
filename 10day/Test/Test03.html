@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <script>
+            window.onload = function () {
+                function getCheckboxValue() {
+                    let query = 'input[name="hobby"]:checked';
+                    let selectedEls = document.querySelectorAll(query);
+                    
+                    let result = ' ';
+                    selectedEls.forEach((el) => {
+                        result += el.value + ' ';
+                    });
+                    document.getElementById('showCheck').innerHTML = result;
+                }
+            // let getCheck = document.getElementsByName("hobby");
+            // getCheck.addEventListener("click", save);
+            // function save() {
+            //     console.log("a");
+            //     let valueArr = [];
+            //     let hobby = document.getElementsByName("hobby");
+            //     for (let i = 0; i < hobby.length; i++) {
+            //         if (hobby[i].checked == true) {
+            //             valueArr.push(hobby[i].value);
+            //         }
+                    
+            //     }
+            //         document.write(valueArr.toString());
+                // let result = " ";
+                // console.log("1");
+                // result = checkbox;
+                // if (checkbox.checked) {
+                //     valueArr.push(result);
+                // }
+                // else{
+                //     for (let i = 0; i < valueArr.length; i++) {
+                //         if (valueArr[i] == result) {
+                //             valueArr.splice(i, 1);
+                //             i--;
+                //         }
+                        
+                //     }
+                // }
+            // }
+            // function show() {
+            //     console.log("ok");
+            //     document.getElementById("showCheck").innerHTML = valueArr.toString();
+                
+            // }
+            // let checkBaseball = document.getElementById("chBaseball").value;
+            // let checkBasketball = document.getElementById("chBasketball").value;
+            // let checkComputerGame = document.getElementById("chComputerGame").value;
+            // checkBaseball.addEventListener("click", save(this));
+            // checkBasketball.addEventListener("click", save(this));
+            // checkComputerGame.addEventListener("click", save(this));
+            
+            // let showBtn = document.getElementById("showButton");
+            // document.getElementById("showButton").onclick = function () {
+                
+            // };
+            // showBtn.addEventListener("click", show)
+
+        }
+
+    </script>
+
+</head>
+<body>
+    <div>취미</div>
+    <ul>
+        <!-- <li>야구<input id="chBaseball" type="checkbox" onclick="save(this)" value="baseball"></li> -->
+        <li>야구<input id="chBaseball" name="hobby" type="checkbox" value="baseball"></li>
+        <!-- <li>농구<input id="chBasketball" type="checkbox" onclick="save(this)" value="basketball"></li> -->
+        <li>농구<input id="chBasketball" name="hobby" type="checkbox" value="basketball"></li>
+        <!-- <li>게임<input id="chComputerGame" type="checkbox" onclick="save(this)" value="game"></li> -->
+        <li>게임<input id="chComputerGame" name="hobby" type="checkbox" value="game"></li>
+    </ul>
+    <input id="showButton" type="button" value="결과보기">
+    <p>결과값 : <p id="showCheck"></p></p>
+</body>
+</html>

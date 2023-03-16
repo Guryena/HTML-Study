@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>체크 박스 선택 결과 출력</title>
+
+    <script>
+        onload = function () {
+            function checkboxHandler() {
+                console.log("a");
+                let checked = [];
+                let boxValue = document.getElementsByClassName("li");
+                for (let i = 0; i < boxValue.length; i++) {
+                    if (boxValue[i].checked == true) {
+                        checked.push(boxValue[i].value);
+                    }
+                }
+
+                // var checkedResult = document.getElementById("result-content");
+                document.getElementById("result-content").innerHTML = checked.toString();
+
+            }
+            var checkboxButton = document.getElementById("result-button");
+            checkboxButton.addEventListener("click", checkboxHandler);
+        }
+    </script>
+</head>
+
+<body>
+    <h1>취미</h1>
+    <ul>
+        <li>야구<input class="li" type="checkbox" value="야구"></li>
+        <li>농구<input class="li" type="checkbox" value="농구"></li>
+        <li>게임<input class="li" type="checkbox" value="게임" ></li>
+
+        <button id="result-button">결과보기</button>
+        <p>결과값: <br>
+        <h1><span id="result-content">
+                <br>
+                
+            </span></h1>
+        </p>
+    </ul>
+</body>
+
+</html>

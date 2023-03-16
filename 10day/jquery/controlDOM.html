@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <script>
+        $(function () {
+
+            let wrapObj = $("#wrap");
+
+            let divObj = $("<div> hello </div>")
+            divObj.appendTo(wrapObj);
+
+            divObj.css("background", "#0000ff");
+
+
+            $("<div> hello </div>")
+                .appendTo($("#wrap"))
+                .css("background", "#ff0000");
+
+            $("<div> Hong </div>")
+                .appendTo($("#wrap"))
+                .css("background", "#d941c5");
+
+            //add link
+            let linkObj = $('<br><a href="http://www.google.com"> google </a><br>');
+            linkObj.appendTo(wrapObj);
+
+            //add img
+            let imgObj = $('<br><img src="/05day/48124_87125_4950.jpg"><br>');
+            imgObj.appendTo(wrapObj);
+
+            //add object
+            var tempObj = {
+                src: "/05day/48124_87125_4950.jpg",
+                width: 297,
+                height: 124,
+                border: "5px",
+            };
+            tempObj.appendTo(wrapObj);
+
+        });
+    </script>
+
+</head>
+
+<body>
+    <div id="wrap">
+        <div>contents</div>
+    </div>
+</body>
+
+</html>

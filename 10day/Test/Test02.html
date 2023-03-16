@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            function changeAcode() {
+                let ascciCode = document.getElementById("ascci").value;
+                for (const key in ascciCode) {
+                    document.getElementById("code").innerHTML = ascciCode.charCodeAt(key);
+                }
+
+            }
+
+            let ascciValue = document.getElementById("ascci");
+            ascciValue.addEventListener("keyup", changeAcode);
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="ascci">
+    <p>아스키 코드값은 : <p id="code"></p></p>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <script>
+        // equal window.onload
+        $(document).ready(function () {
+            console.log(1);
+        })
+        $(function () {
+            console.log(2);
+        })
+        $(document).ready(function () {
+            console.log(3);
+        })
+        $(function () {
+            $("*").css("fontSize", "1.1em");
+            $("li").css("color", "#0000ff");
+            $("#item").css("background", "#ffff00").css("width", "300px");
+            $(".seoul").css("background", "#ff0000");
+            $('#wrap p').css("border", '2px solid #cccccc');
+            $('#wrap > p').css('border', "5px solid #cccccc");
+
+        })
+        $(function () {
+            $('input[type="text"]').css('color', "#ff0000");
+            $('input[type="password"]').css("color", '#0000ff');
+            $("input:submit").css("fontSize", "1.2em");
+            let chk = $('input:checked').val();//필터 선택자
+            console.log("chk : " + chk);
+
+            $("li:nth-child(2n+1)").css("background", "#ffff00"); //함수 선택자
+        })
+
+    </script>
+
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <p>jQuery selector</p>
+        <div id="centent">
+            <h1>centent</h1>
+            <p>abcdefg</p>
+            <p>ABCDEFG</p>
+        </div>
+        <div id="item">
+            <ul>
+                <li class="seoul">서울</li>
+                <li class="gyeonggi_do">경기도</li>
+                <li>충청도</li>
+                <li>전라도</li>
+                <li>경상도</li>
+                <li>강원도</li>
+                <li>제주도</li>
+
+
+            </ul>
+        </div>
+    </div>
+
+    <form>
+        UserID <input type="text">
+        <br />
+        UserPW <input type="password">
+        <br />
+        Submit <input type="submit" value="submit">
+        <br />
+        Reset <input type="reset" value="reset">
+        <br />
+        Food <br />
+        사과<input type="checkbox" id="apple" value="사과" />
+        바나나<input type="checkbox" id="banana" value="바나나" checked />
+        수박<input type="checkbox" id="watermelon" value="수박" />
+        <br />
+        
+        <ul>
+           <li>이만기</li>
+           <li>이승엽</li>
+           <li>이종범</li>
+           <li>이재학</li>
+           <li>이순철</li>
+           <li>이길동</li>
+           <li>이동국</li>
+        </ul>
+     </form>
+
+
+</body>
+
+</html>

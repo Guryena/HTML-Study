@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+<script>
+        window.onload = function () {
+            let p = $("p") //object jquery type
+            console.log(p);
+            
+            let elementP = document.getElementsByTagName("p"); //HTMLcollection type
+            console.log(elementP);
+            
+            p.css("width", "500px");
+            
+            $("p")
+                .css("color", "#ff0000")
+                .css("border", "1px solid #0000ff")
+                .css("fontsize", "2em")
+                .css("lineHeight", "300px")
+                .css("textAlign", "center");
+
+            jQuery("p")
+                .css("height", "500px");
+            
+            
+            p.css("textDecoration", "underLine");
+            
+        };
+</script>
+</head>
+<body>
+
+<p>hello</p>
+
+</body>
+</html>
