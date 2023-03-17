@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        $(function () {
+            // function addHandler() {
+            //     let number1 = Number($("#num1").val());
+            //     console.log(number1);
+            //     let number2 = Number($("#num2").val());
+            //     console.log(number2);
+            //     let sum = number1 + number2
+            //     $("#result").val(sum);
+            // }
+            // $("#add").click(addHandler);
+                
+            $("#add").click(function () {
+                // let result = Number($("#num1").val()) + Number($("#num2").val());
+
+                let number1 = Number($("#num1").val());
+                console.log(number1);
+                let number2 = Number($("#num2").val());
+                console.log(number2);
+                let sum = number1 + number2
+                $("#result").val(sub);
+            })
+
+        })
+    </script>
+</head>
+<body>
+    <input id="num1" type="text">
+    <p> + </p>
+    <input id="num2" type="text">
+    <p> = </p>
+    <input id="result" type="text">
+    <input id="add" type="button" value="연산">
+    
+</body>
+</html>

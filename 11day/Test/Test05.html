@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <script>
+        $(function () {
+            $.ajax({
+                type : "get",
+                url : "http://sample.bmaster.kro.kr/contacts?pageno=3&pagesize=10",
+                success : function (data) {
+                console.log("complete communication");
+                
+                $(data.contacts).each(function (index, member) {
+                    console.log(member);
+                    let copy = $("#table").clone();
+
+                        $(copy).each(function(x) {
+                            $(copy[x]).html("<td>"+member.no+"</td>"
+                            +"<td>"+member.name+"</td>"
+                            +"<td>"+member.tel+"</td>"
+                            +"<td>"+member.address+"</td>"
+                            +"<td><img src='"+member.photo+"'</img></td>"
+                            +"<td><button class='deleteBtn'>삭제</button></td>")
+                            copy.appendTo("#border")
+                        })
+                        
+                    });
+                    let tableArr = $("#table");
+                    $('.deleteBtn').click(function () {
+                        $(this.parentNode.parentNode).remove();
+                    })
+    
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <table id="border" border="1">
+        <tr id="table">
+            <td>no</td>
+            <td>name</td>
+            <td>tel</td>
+            <td>address</td>
+            <td>photo</td>
+            <td></td>
+            
+        </tr>
+    </table>
+</body>
+</html>

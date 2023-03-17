@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#loginForm').submit(function (event) {
+              event.preventDefault();   //기본적인 동작을 막는다
+            
+              // $("#sbmBtn").click(function () {
+
+                if ($("#uId").val() == "") {
+                    alert("user id blank!!");
+                } else if ($("#uPw").val() == "") {
+                    alert("user pw blank!!");
+                } else {
+                    alert("login ok!!");
+                    $("#loginForm").submit();
+                }
+
+            });
+
+            $("#resBtn").click(function () {
+                alert("reset ok!!");
+                $("#loginForm").reset();
+            });
+
+            $('#test').click(function (event) {
+                event.preventDefault();
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <form id="loginForm" action="http://www.google.com" >
+        USER ID : <input id="uId" type="text" name="uId"><br>
+        USER PW : <input id="uPw" type="password" name="upw"><br>
+        <input id="sbmBtn" type="button" value="SUBMIT">
+        <input id="resBtn" type="button" value="RESET">
+        
+    </form>
+    <a id="test" href="http://www.google.com" >google</a>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <script>
+        $(function () {
+            $("#sumBtn").click(function () {
+                let totalPrice = 0; 
+                let fruitValue = $(".fruit"); //class가 fruit인 것을 모두 배열로 담는다.
+                $.each(fruitValue, function(index, value) {
+                    if (fruitValue[index].checked == true) {
+                        totalPrice += Number($(fruitValue[index]).val());
+                    }       
+                });
+                // $("input:checkbox:checked").each(function(){
+                //     totalPrice += Number($(this.val()));
+                // )};
+                $("#total").html(totalPrice);
+
+            })
+        })
+    </script>
+</head>
+<body>
+    <div>
+    <p> 바나나(1000원) <input name="fruit" class="fruit" type="checkbox" value="1000"></p>
+    <p> 사과(500원) <input name="fruit" class="fruit" type="checkbox" value="500"></p>
+    <p> 배(1500원) <input name="fruit" class="fruit" type="checkbox" value="1500"></p>
+    <p><input id="sumBtn" type="button" value="총합구하기"></p>
+    <p>선택한 총 가격 : <p id="total"></p></p>
+</div>
+</body>
+</html>

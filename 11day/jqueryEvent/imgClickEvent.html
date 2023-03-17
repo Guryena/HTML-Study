@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        // $(".logo").mousedown(function () {
+        //     console.log("logo image mousedown");
+        // });
+        
+        // $(".logo").click(function () {
+        //     console.log("logo image click");
+        // });
+        function imgClickEventListener() {
+            console.log("logo img click");
+            console.log("called imgClickEventListener");
+        }
+
+        $(".logo").click(imgClickEventListener);
+        
+    })
+</script>
+</head>
+<body>
+    <div>
+        <img class="logo" src="/05day/48124_87125_4950.jpg">
+    </div>
+</body>
+</html>

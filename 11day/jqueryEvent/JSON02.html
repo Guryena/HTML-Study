@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <script>
+        $(function () {
+            $.ajax({
+                type : "get",
+                url : "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json",
+                success : function (data) {
+                    //complete communication
+                    console.log("complete communication");
+                    console.log(data);
+                    console.log(data.squadName);
+
+                    $(data.members).each(function (index, member) {
+                        let copy = $("#table").clone();
+                        $(copy).each(function (x) {
+                            $(copy[x]).html("<td>"+member.name+"</td>"+"<td>"+member.age+"</td>");
+                            copy.appendTo("#border")
+                            
+                        })
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <table id="border" border="1">
+        <tr id="table">
+            <td>이름</td>
+            <td>나이</td>
+        </tr>
+    </table>
+</body>
+</html>
