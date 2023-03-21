@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* flex-direction
+    flex-wrap
+    flex-flow
+    justify-content
+    align-items
+    align-content */
+    
+    .flex_container{
+        background-color: cadetblue;
+        height: 500px;
+        display: flex;
+        /* flex-direction: row; */ /*  반응형 overflow */
+        /* flex-wrap: wrap;  */  /* 랩으로 감싼다*/
+        justify-content: center; /* 정렬 */
+        align-items: center;
+    }   
+    .flex_container > div{
+        background-color: #f1f1f1;
+        margin: 10px;
+        padding: 20px;
+        font-size: 30px;
+        float: left;
+        width: 10%;
+        text-align: center;
+    }
+</style>
+<body>
+    <div class="flex_container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <!-- <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div> -->
+    </div>
+</body>
+</html>
