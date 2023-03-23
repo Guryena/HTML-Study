@@ -34,9 +34,6 @@
         $('#gameStart').click(function () {
             createNum();
             console.log('start');
-            // for (const key in lottoArr) {
-            //     $('#num'+key).text(Number(lottoArr[key]))
-            // }
             for (let i = 1; i <= 7; i++) {
                 $("#num" + i).text(Number(lottoArr[i - 1]));
             }
